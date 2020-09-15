@@ -1,0 +1,235 @@
+Первая часть
+
+Задание 1. 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ id
+uid=1000(astronomax) gid=1000(astronomax) группы=1000(astronomax),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),114(lpadmin),134(sambashare)
+
+Задание 2. 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ date
+Сб 12 сен 2020 16:08:31 MSK
+
+Задание 3. 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ pwd
+/home/astronomax
+
+Задание 4. 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ ls
+ amdgpu-pro-20.30-1109583-ubuntu-20.04          Видео         Музыка
+ amdgpu-pro-20.30-1109583-ubuntu-20.04.tar.xz   Документы     Общедоступные
+ homework.txt                                   Загрузки     'Рабочий стол'
+ linuxmint-20-cinnamon-64bit.iso                Изображения   Шаблоны
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ ls -l
+итого 2259652
+drwxr-xr-x 3 astronomax astronomax      12288 июл 15 05:47  amdgpu-pro-20.30-1109583-ubuntu-20.04
+-rw-r--r-- 1 astronomax astronomax  329041480 сен 10 23:53  amdgpu-pro-20.30-1109583-ubuntu-20.04.tar.xz
+-rw-rw-r-- 1 astronomax astronomax          0 сен 12 16:07  homework.txt
+-rw-r--r-- 1 astronomax astronomax 1984790528 сен 10 20:49  linuxmint-20-cinnamon-64bit.iso
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Видео
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Документы
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Загрузки
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Изображения
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Музыка
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Общедоступные
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13 'Рабочий стол'
+drwxr-xr-x 2 astronomax astronomax       4096 сен 11 17:13  Шаблоны
+
+Задание 5. 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ mkdir work
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ cd work
+
+Задание 6.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ echo "0 1 2 3 4 5 6 7 8 9" > digits.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cat digits.txt
+0 1 2 3 4 5 6 7 8 9
+
+Задание 7.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cat > twolines.txt << EOF
+> 1
+> 2
+> EOF
+
+Задание 8.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ echo "1" > temp
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ START=0
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ while [ $START -lt 65 ]; do
+> cat temp >> multiline.txt
+> let START=START+1
+> done
+
+Задание 9.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ wc multiline.txt
+ 65  65 130 multiline.txt
+
+Задание 10.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ head -5 /etc/passwd >> first.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ tail -5 /etc/passwd >> second.txt
+
+Задание 11.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls -l /etc/ >> res.txt
+
+Задание 12.
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls -l /etc | grep "^-" | wc
+     95     855    5614
+
+Вторая часть
+
+Задание 1.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ cd work
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ mkdir dirA
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cd dirA
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirA$ echo "1" > 1.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirA$ echo "2" > 2.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirA$ cd ..
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ mkdir dirB
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cd dirB
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirB$ echo "3" > 3.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirB$ echo "4" > 4.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dirB$ cd ..
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cat dirA/1.txt dirA/2.txt dirB/3.txt dirB/4.txt > merge.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ rm -R dirA dirB
+
+Задание 2.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ cat < /etc/passwd | grep "astronomax"
+astronomax:x:1000:1000:astronomax,,,:/home/astronomax:/bin/bash
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ date --date=01/01/2021 +%A
+Пятница
+
+Задание 3.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ id >> file.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls >> file.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ps >> file.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ date >> file.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ grep "file.txt" file.txt
+file.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cal 2019 >> calendar.txt
+
+Задание 4.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls /etc | grep -i '.*\.conf$' | head
+adduser.conf
+apg.conf
+appstream.conf
+brltty.conf
+ca-certificates.conf
+casper.conf
+debconf.conf
+deluser.conf
+e2scrub.conf
+fprintd.conf
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ mkdir dir
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cd dir
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work/dir$ cd ..
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ chmod u-x dir
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ cd dir
+bash: cd: dir: Отказано в доступе
+
+Задание 5.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ > a.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ chmod 640 a.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ chmod g-r a.txt
+
+Задание 6.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ tar -cvf arhive.tar first.txt second.txt third.txt
+first.txt
+second.txt
+third.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ gzip -9 arhive.tar
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ tar -xvf arhive.tar.gz
+first.txt
+second.txt
+third.txt
+
+Задание 7.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ > a.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ chmod 640 a.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ chmod o+w a.txt
+
+Задание 8.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls /usr/bin | grep "^[z]"
+zdump
+zenity
+zip
+zipcloak
+zipdetails
+zipgrep
+zipinfo
+zipnote
+zipsplit
+zjsdecode
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ find . -mtime -1
+.
+./.mozilla/firefox/amuijpf4.default-release
+./.mozilla/firefox/amuijpf4.default-release/SiteSecurityServiceState.txt
+./.mozilla/firefox/amuijpf4.default-release/sessionCheckpoints.json
+./.mozilla/firefox/amuijpf4.default-release/extensions.json
+./.mozilla/firefox/amuijpf4.default-release/crashes
+./.mozilla/firefox/amuijpf4.default-release/crashes/store.json.mozlz4
+./.mozilla/firefox/amuijpf4.default-release/sessionstore-backups
+./.mozilla/firefox/amuijpf4.default-release/sessionstore-backups/recovery.baklz4
+./.mozilla/firefox/amuijpf4.default-release/sessionstore-backups/recovery.jsonlz4
+
+Задание 9.
+1) 
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ find . -user astronomax | wc
+  12620   12630 1301971
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ tail -5 /etc/passwd | wc
+      5      10     362
+
+Задание 10.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ > file.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ mkdir dir
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls -l
+итого 2
+drw-rwxr-x 2 astronomax astronomax  4096 сен 13 18:36 dir
+-rw-rw-r-- 1 astronomax astronomax     0 сен 14 18:36 file.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~/work$ ls /etc | grep -i '.*\.conf$' | head
+adduser.conf
+apg.conf
+appstream.conf
+brltty.conf
+ca-certificates.conf
+casper.conf
+debconf.conf
+deluser.conf
+e2scrub.conf
+fprintd.conf
+
+Задание 11.
+1)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ > a.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ chmod o+w a.txt
+2)
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ mv a.txt aaa.txt
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ cat > aaa.txt << EOF
+> 1
+> 2
+> EOF
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ cat aaa.txt
+1
+2
+astronomax@astronomax-VivoBook-ASUSLaptop-X521IA-M533IA:~$ rm aaa.txt
+
+
+
+
+
+
+
