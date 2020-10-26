@@ -1,13 +1,40 @@
 # print your command here
 
-a. git init ...
+a. git init myTest
 
-b.
+b. echo "This is test repository" > bio.md
+  cat > main.cpp << EOF
+  #include <iostream>
+  #include <cstdio>
+  using namespace std;
+  signed main(){
+  cout << "Hello!";
+  return 0;
+  }
+  EOF
+  git add main.cpp bio.md
+  git commit -m "task b"
 
-c.
+c. printf "build_run: main.cpp\n\tg++ main.cpp -o main\n\t./main" > Makefile
+  make
+  git add main.cpp bio.md Makefile 
+  git commit -m "task c"
 
-d.
+d. echo " " >> bio.md
+ git add bio.md
+ git commit -m "first"
 
-e.
+ echo " " >> bio.md
+ git add bio.md
+ git commit -m "second"
 
-f.
+ echo " " >> bio.md
+ git add bio.md
+ git commit -m "third"
+
+e. git checkout -b cmake $(git rev-list --max-parents=0 HEAD)
+rm Makefile
+printf "cmake_minimum_required(VERSION 3.10)\nproject(homework)\nadd_executable(homework main.cpp)" > CMakeLists.txt
+
+f. git checkout master
+git merge cmake
